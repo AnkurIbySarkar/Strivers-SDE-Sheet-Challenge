@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <vector>
 using namespace std;
 bool findPattern(string p, string s)
 {
@@ -15,7 +16,7 @@ bool findPattern(string p, string s)
     }
     return false;
 }
-void computeLPS(const std::string &p, std::vector<int> &lps)
+void computeLPS(string &p, vector<int> &lps)
 {
     int psize = p.size();
     int len = 0; // Length of the previous longest proper prefix which is also a suffix
@@ -46,12 +47,12 @@ void computeLPS(const std::string &p, std::vector<int> &lps)
     }
 }
 
-bool findPattern(const std::string &p, const std::string &s)
+bool findPattern(string &p, string &s)
 {
     int ssize = s.size();
     int psize = p.size();
 
-    std::vector<int> lps;
+    vector<int> lps;
     computeLPS(p, lps);
 
     int i = 0; // Index for string s
