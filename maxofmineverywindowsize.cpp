@@ -22,6 +22,7 @@ vector<int> maxMinWindow(vector<int> a, int n)
     }
     return ans;
 }
+// optimized approach
 vector<int> nextSmaller(vector<int> &a)
 {
     int n = a.size();
